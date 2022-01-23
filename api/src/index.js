@@ -187,7 +187,7 @@ const resolvers = {
       return true;
     },
 
-    // ToDo Items
+    // Todo Items
     createToDo: async(_, { content, taskListId }, { db, user }) => {
       if (!user) { throw new Error('Authentication Error. Please sign in'); }
       const newToDo = {
