@@ -7,12 +7,12 @@ dotenv.config();
 
 const { DB_URI, DB_NAME, JWT_SECRET } = process.env;
 
-const getToken = (user) => jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '30 days' });
+const getToken = (user) => jwt.sign({ id: user._id }, '1234567', { expiresIn: '30 days' });
 
 const getUserFromToken = async (token, db) => {
   if (!token) { return null }
 
-  const tokenData = jwt.verify(token, JWT_SECRET);
+  const tokenData = jwt.verify(token, '1234567');
   if (!tokenData?.id) {
     return null;
   }

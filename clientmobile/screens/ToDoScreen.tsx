@@ -4,7 +4,7 @@ import { View } from '../components/Themed';
 import { TodoItem } from '../components/TodoItem';
 import { RootTabScreenProps } from '../types';
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function ToDoScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   const [title, setTitle] = useState('')
   const [todos, setTodos] = useState([{
     id : '1',
@@ -49,7 +49,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
     //   behavior={Platform.OS === 'ios' ? 'padding': 'height'}
     //   >
         <View style={styles.container}>
-            <TextInput 
+          <TextInput 
             style={styles.title} 
             value={title}
             placeholder={"title"}
